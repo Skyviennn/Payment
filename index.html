@@ -1,91 +1,95 @@
+<!DOCTYPE html>
 <html lang="id">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Skyvien Payment</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>SKYVIEN Payment</title>
   <style>
     body {
       margin: 0;
       font-family: 'Segoe UI', sans-serif;
-      background: radial-gradient(circle at center, #0f0f1a 0%, #050510 100%);
-      color: #ffffff;
+      background: url('itachi.jpg') no-repeat center center fixed;
+      background-size: cover;
+      color: white;
       text-align: center;
-      padding: 20px;
+      padding: 30px 10px;
+      backdrop-filter: brightness(0.6);
     }
+
     .container {
       max-width: 400px;
-      margin: 0 auto;
-      background: #1f1f2e;
-      border-radius: 15px;
-      padding: 20px;
-      box-shadow: 0 0 20px rgba(0,255,255,0.1);
+      margin: auto;
+      background-color: rgba(0, 0, 0, 0.6);
+      padding: 25px;
+      border-radius: 12px;
+      box-shadow: 0 0 20px rgba(255, 0, 0, 0.5);
     }
-    h2 {
-      color: #fdd835;
+
+    .qris-img {
+      width: 80%;
+      margin: 20px 0;
+      border-radius: 10px;
+      box-shadow: 0 0 10px red;
+    }
+
+    .payment-text {
+      font-weight: bold;
+      font-size: 20px;
       margin-bottom: 5px;
     }
-    p {
-      font-size: 14px;
-      color: #bbbbbb;
-    }
-    .qr img {
-      width: 200px;
-      border-radius: 12px;
-      margin: 15px 0;
-    }
-    .btn {
-      display: block;
-      width: 100%;
-      max-width: 100%;
-      margin: 10px auto;
+
+    .dana-box {
+      background-color: rgba(255, 255, 255, 0.1);
       padding: 12px;
-      background-color: #3a3aff;
-      color: white;
-      border: none;
-      border-radius: 8px;
-      font-size: 15px;
-      cursor: pointer;
-      transition: 0.3s;
-      text-decoration: none;
-    }
-    .btn:hover {
-      background-color: #2a2acc;
-    }
-    .info-box {
       margin-top: 10px;
-      padding: 10px;
-      background-color: #2c2c3a;
       border-radius: 10px;
-      display: none;
+      color: #fff;
+      font-size: 16px;
+    }
+
+    .link-buttons {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      margin-top: 25px;
+    }
+
+    .link-btn {
+      background-color: #222;
+      padding: 12px;
+      border-radius: 8px;
+      text-decoration: none;
+      color: #fff;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+
+    .link-btn:hover {
+      background-color: #444;
+    }
+
+    h2 {
+      margin-top: 0;
     }
   </style>
 </head>
 <body>
-
   <div class="container">
-    <h2>(SKYVIEN)</h2>
+    <h2>PAYMENT SKYVIEN ⚡</h2>
     <p>Pilih metode pembayaran yang tersedia:</p>
-    <h3>QRIS ALLPAY</h3>
+    <p class="payment-text">QRIS ALLPAY</p>
+    <img src="qris.png" alt="QRIS ALLPAY" class="qris-img">
 
-    <div class="qr">
-      <img src="qris.jpg" alt="QRIS Skyvien" />
+    <div class="dana-box">
+      DANA: 0838******** <br>
+      A/N: LEBIH LENGKAP PM ADMIN
     </div>
 
-    <button class="btn" onclick="toggleDana()">Dana</button>
-    <div id="danaBox" class="info-box">
-      <p>0838-****-****</p>
-      <p>LEBIH LENGKAP PM ADMIN AJA</p>
+    <div class="link-buttons">
+      <a href="https://whatsapp.com/channel/0029VbAVV21BlHpUsB9hDm47" class="link-btn">TESTIMONI SKYVIEN</a>
+      <a href="https://whatsapp.com/channel/0029Vb9qI1ELikgH4SX8vD3r" class="link-btn">CHANNEL UTAMA SKYVIEN</a>
+      <a href="#" class="link-btn">SKYVIEN GANTENG</a>
     </div>
-
-    <a href="https://whatsapp.com/channel/0029VbAVV21BlHpUsB9hDm47" class="btn" target="_blank">TESTIMONI SKYVIEN</a>
-    <a href="https://whatsapp.com/channel/0029Vb9qI1ELikgH4SX8vD3r" class="btn" target="_blank">CHANNEL UTAMA SKYVIEN</a>
   </div>
-
-  <script>
-    function toggleDana() {
-      var box = document.getElementById('danaBox');
-      box.style.display = box.style.display === 'block' ? 'none' : 'block';
-    }
-  </script>
 </body>
 </html>
