@@ -2,90 +2,88 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Skyvien Cell</title>
+  <title>Skyvien Payment</title>
   <style>
     body {
+      margin: 0;
       font-family: 'Segoe UI', sans-serif;
-      background-color: #121212;
+      background: radial-gradient(circle at center, #0f0f1a 0%, #050510 100%);
       color: #ffffff;
       text-align: center;
       padding: 20px;
     }
-    .profile {
-      margin-bottom: 20px;
+    .container {
+      max-width: 400px;
+      margin: 0 auto;
+      background: #1f1f2e;
+      border-radius: 15px;
+      padding: 20px;
+      box-shadow: 0 0 20px rgba(0,255,255,0.1);
     }
-    h1 {
-      color: #4fc3f7;
-      font-size: 28px;
+    h2 {
+      color: #fdd835;
       margin-bottom: 5px;
     }
     p {
       font-size: 14px;
-      color: #cccccc;
-      margin-bottom: 10px;
-    }
-    .btn {
-      display: block;
-      margin: 10px auto;
-      padding: 14px 24px;
-      background-color: #1e88e5;
-      color: #fff;
-      border: none;
-      border-radius: 10px;
-      text-decoration: none;
-      font-size: 16px;
-      width: 80%;
-      max-width: 320px;
-      transition: 0.3s;
-    }
-    .btn:hover {
-      background-color: #1565c0;
-    }
-    .qr {
-      margin-top: 20px;
+      color: #bbbbbb;
     }
     .qr img {
       width: 200px;
       border-radius: 12px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+      margin: 15px 0;
     }
-    .box {
-      background: #1e1e1e;
+    .btn {
+      display: block;
+      width: 100%;
+      margin: 10px auto;
+      padding: 12px;
+      background-color: #3a3aff;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      font-size: 15px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+    .btn:hover {
+      background-color: #2a2acc;
+    }
+    .info-box {
+      margin-top: 10px;
+      padding: 10px;
+      background-color: #2c2c3a;
       border-radius: 10px;
-      padding: 15px;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.6);
-      margin: 20px auto;
-      max-width: 320px;
-    }
-    .footer-links {
-      margin-top: 40px;
+      display: none;
     }
   </style>
 </head>
 <body>
 
-  <div class="profile">
-    <h1>Skyvien Cell</h1>
-    <p>Klik tombol di bawah untuk bayar atau hubungi kami</p>
+  <div class="container">
+    <h2>PAYMENT SKYVIEN</h2>
+    <p>Pilih metode pembayaran yang tersedia:</p>
+    <h3>QRIS ALLPAY</h3>
+
+    <div class="qr">
+      <img src="qris.jpg" alt="QRIS Skyvien" />
+    </div>
+
+    <button class="btn" onclick="toggleDana()">Dana</button>
+    <div id="danaBox" class="info-box">
+      <p>0838*******</p>
+      <p>NOMOR LENGKAP CHAT ADMIN DIBAWAH</p>
+    </div>
+
+    <a href="https://whatsapp.com/channel/0029VbAVV21BlHpUsB9hDm47" class="btn" target="_blank">TESTIMONI SKYVIEN 🔥</a>
+    <a href="https://whatsapp.com/channel/0029Vb9qI1ELikgH4SX8vD3r" class="btn" target="_blank">CHANNEL SKYVIEN 🔥</a>
   </div>
 
-  <div class="box">
-    <h3>Pembayaran via DANA</h3>
-    <p>0838********</p>
-    <p>LEBIH LENGKAP CHAT ADMIN, NOMOR DIBAWAH INI</p>
-  </div>
-
-  <a href="https://wa.me/254736577324" class="btn">Chat via WhatsApp</a>
-
-  <div class="qr">
-    <p>Atau scan QRIS berikut:</p>
-    <img src="qris.jpg" alt="QRIS Skyvien Cell" />
-  </div>
-
-  <div class="footer-links">
-    <a href="https://whatsapp.com/channel/0029VbAVV21BlHpUsB9hDm47" class="btn" target="_blank">TESTIMONI SKYVIEN</a>
-    <a href="https://whatsapp.com/channel/0029Vb9qI1ELikgH4SX8vD3r" class="btn" target="_blank">CHANNEL UTAMA SKYVIEN</a>
-  </div>
-
+  <script>
+    function toggleDana() {
+      var box = document.getElementById('danaBox');
+      box.style.display = box.style.display === 'block' ? 'none' : 'block';
+    }
+  </script>
 </body>
 </html>
